@@ -1,5 +1,4 @@
 # Desafio1-UDB
-<<<<<<< HEAD
 
 Aplicar la librería Bootstrap para desarrollar diseños web adaptables a diferentes resoluciones de pantalla (Responsive Web Design) y crear una página web funcional y estéticamente coherente.
 
