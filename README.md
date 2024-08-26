@@ -12,8 +12,7 @@ Aplicar la librería Bootstrap para desarrollar diseños web adaptables a difere
 ## Integrantes del Proyecto
 
 - **Marlon Eduardo Montenegro Paz** - [@MarlonMontenegro](https://github.com/MarlonMontenegro)
+- **Hugo Fernando Sosa Orellana** - [@FS0SA](https://github.com/FS0SA)
 - **Nombre Completo** - [@usuario_github](https://github.com/usuario_github)
 - **Nombre Completo** - [@usuario_github](https://github.com/usuario_github)
 - **Nombre Completo** - [@usuario_github](https://github.com/usuario_github)
-- **Nombre Completo** - [@usuario_github](https://github.com/usuario_github)
-
