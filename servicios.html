@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Arquitectura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .service-card h3 {
+            color: #007BFF;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+        }
+
+        .service-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .service-cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .service-card {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nuestros Servicios</h2>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="diseno-arquitectonico.jpg" alt="Diseño Arquitectónico">
+                <h3>Diseño Arquitectónico</h3>
+                <p>Desarrollamos proyectos personalizados desde la concepción de la idea hasta la entrega final, asegurándonos de que cada detalle arquitectónico esté perfectamente alineado con las necesidades del cliente.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="remodelacion-interiores.jpg" alt="Remodelación de Interiores">
+                <h3>Remodelación de Interiores</h3>
+                <p>Transformamos espacios interiores para mejorar su funcionalidad y estética, utilizando materiales de alta calidad y técnicas innovadoras que maximizan el confort y la belleza.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="gestion-proyectos.jpg" alt="Gestión de Proyectos">
+                <h3>Gestión de Proyectos</h3>
+                <p>Nos encargamos de todo el proceso de construcción, desde la planificación hasta la ejecución, gestionando todos los aspectos para asegurar que el proyecto se complete en tiempo y forma.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="arquitectura-sostenible.jpg" alt="Arquitectura Sostenible">
+                <h3>Arquitectura Sostenible</h3>
+                <p>Diseñamos edificaciones que respetan el medio ambiente, implementando soluciones energéticas sostenibles que promueven la eficiencia y la conservación de los recursos naturales.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
