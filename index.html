@@ -1,96 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="#">
-  <link rel="stylesheet" href="css/Normalize.css">
-  <title>Arch Studio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+
+    <!-- NORMALIZE  -->
+    <link rel="stylesheet" href="css/Normalize.css">
+
+    <!-- BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONOS DE BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- CSS PERSONALIZADO  -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- CSS PERSONALIZADO  -->
+    <link rel="stylesheet" href="css/home.css">
+
+    <title>Arch Studio</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light py-4">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.svg" alt="Bootstrap" width="70" height="30">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Servicios</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-  Home
+<main class="container  ">
+    <!-- CAROUSEL -->
+    <div class="row-12">
+        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                    <img src="assets/home/desktop/image-hero-paramour.jpg" class="d-block w-100" alt="hero">
+                    <div class="carousel-caption text-start top-0 mt-4 me-5 c-caption">
+                        <h1 class="mt-5 c-title-hero">Proyecto Paramour</h1>
+                        <p class="c-txt"> Proyecto realizado para un museo de arte cerca del suroeste de Londres. El
+                            Proyecto Paramour
+                            es una declaración de
+                            arquitectura moderna y audaz.</p>
+                        <a class="btn btn-dark c-btn" href="#">
+                            <span class="me-2">Ver Portafolio</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="assets/home/desktop/image-hero-seraph.jpg" class="d-block w-100" alt="hero">
+                    <div class="carousel-caption text-start top-0 mt-4 me-5 c-caption">
+                        <h1 class="mt-5 c-title-hero">Estación Seraph</h1>
+                        <p class="c-txt">El proyecto Estación Seraph nos desafió a diseñar una estación única que
+                            transportara a las
+                            personas a través del
+                            tiempo. El resultado es un modelo fresco y futurista inspirado en estaciones espaciales.</p>
+                        <a class="btn btn-dark c-btn" href="#">
+                            <span class="me-2">Ver Portafolio</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="assets/home/desktop/image-hero-trinity.jpg" class="d-block w-100" alt="hero">
+                    <div class="carousel-caption text-start top-0 mt-4 me-5 c-caption">
+                        <h1 class="mt-5 c-title-hero">Torre Federal II</h1>
+                        <p class="c-txt">Un proyecto temático de secuela para una torre construida originalmente en el
+                            siglo XIX.
+                            Lo
+                            logramos con una apariencia
+                            impactante de minimalismo brutal con toques modernos.</p>
+                        <a class="btn btn-dark c-btn" href="#">
+                            <span class="me-2">Ver Portafolio</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item c-item">
+                    <img src="assets/home/desktop/image-hero-federal.jpg" class="d-block w-100" alt="hero">
+                    <div class="carousel-caption text-start top-0 mt-4 me-5  c-caption">
+                        <h1 class="mt-5 c-title-hero">Torre Trinity Bank</h1>
+                        <p class="c-txt">Trinity Bank nos desafió a hacer un concepto para un edificio de 84 pisos
+                            ubicado en el medio
+                            de una ciudad con alta
+                            frecuencia sísmica. Para este proyecto, utilizamos curvas para combinar diseño y estabilidad
+                            y cumplir con nuestros
+                            objetivos.</p>
+                        <a class="btn btn-dark c-btn" href="#">
+                            <span class="me-2">Ver Portafolio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
-  Portfolio
-  About Us
-  Contact
+    <div class="container">
+        <div class="row">
+            <h1 class="c-welcome">Welcome</h1>
+            <div class="col-md-6 col-12">
+                <h1 class="c-title">Bienvenido a Arch Studio</h1>
 
-  Project Paramour
+                <p class="c-welcome-txt">Contamos con una red y habilidades únicas para ayudar a dar vida a tus
+                    proyectos. Nuestro pequeño equipo de individuos altamente capacitados, combinado con nuestra
+                    amplia
+                    red, nos coloca en una posición fuerte para
+                    ofrecer resultados excepcionales.</p>
 
-  Project made for an art museum near Southwest London. Project Paramour is 
-  a statement of bold, modern architecture.
+                <p class="c-welcome-txt">En los últimos 10 años, hemos trabajado en todo tipo de proyectos. Desde
+                    estaciones hasta edificios
+                    de gran altura,
+                    creamos espacios que inspiran y deleitan.</p>
 
-  See Our Portfolio
+                <p class="c-welcome-txt">Trabajamos estrechamente con nuestros clientes para entender las
+                    complejidades
+                    de cada proyecto. Esto
+                    nos permite
+                    trabajar en armonía con el área circundante para crear proyectos verdaderamente impresionantes
+                    que
+                    resistirán la prueba
+                    del tiempo.</p>
+            </div>
+            <div class="col-md-6 text-center ">
+                <img class="c-img-content" src="assets/home/desktop/image-welcome.jpg" alt="edificio">
+            </div>
+        </div>
+    </div>
 
-  Seraph Station
+    <div class="container my-5 ">
+        <div class="c-jumbotron ">
+            <h1 class="display-4 c-jumbotron-txt">¡Pequeño equipo, grandes ideas!</h1>
+            <a class="btn btn-dark c-btn" href="#">
+                <span class="me-2">Ver Portafolio</span>
+            </a>
+        </div>
+    </div>
 
-  The Seraph Station project challenged us to design a unique station that would 
-  transport people through time. The result is a fresh and futuristic model 
-  inspired by space stations.
+    <div class="container my-5 ">
 
-  See Our Portfolio
+        <div class="row align-items-center">
+            <div class="col-md-12 c-featured-call-to-action">
+                <h1>Destacados</h1>
+                <a class="btn btn-dark c-btn c-jumbotron-btn" href="#">
+                    <span class="me-2">Ver todos</span>
+                </a>
+            </div>
+        </div>
 
-  Federal II Tower
+        <div class="row c-featured align-items-center">
+            <div class="my-5 col-4 c-featured-1">
+                <h1 class="c-number one">1</h1>
+                <div class="c-text-container-featured">
+                    <h2 class="c-title-featured">Proyecto del Sol</h2>
+                    <a class="c-txt-featured" href="#">Ver Todos los Proyectos</a>
+                </div>
+            </div>
+            <div class="my-5 col-4 c-featured-2">
+                <h1 class="c-number">2</h1>
+                <div class="c-text-container-featured">
+                    <h2 class="c-title-featured">Torre 228B</h2>
+                    <a class="c-txt-featured" href="#">Ver Todos los Proyectos</a>
+                </div>
+            </div>
+            <div class="my-5 col-4 c-featured-3">
+                <h1 class="c-number">3</h1>
+                <div class="c-text-container-featured">
+                    <h2 class="c-title-featured">Le Prototype</h2>
+                    <a class="c-txt-featured" href="#">Ver Todos los Proyectos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
-  A sequel theme project for a tower originally built in the 1800s. We achieved 
-  this with a striking look of brutal minimalism with modern touches.
-  
-  See Our Portfolio
 
-  Trinity Bank Tower
 
-  Trinity Bank challenged us to make a concept for a 84 story building located 
-  in the middle of a city with a high earthquake frequency. For this project we 
-  used curves to blend design and stability to meet our objectives.
 
-  See Our Portfolio
 
-  01
-  02
-  03
-  04
-
-  Welcome
-
-  Welcome to Arch Studio
-
-  We have a unique network and skillset to help bring your projects to life. Our 
-  small team of highly skilled individuals combined with our large network put us 
-  in a strong position to deliver exceptional results.
-
-  Over the past 10 years, we have worked on all kinds of projects. From stations 
-  to high-rise buildings, we create spaces that inspire and delight.
-
-  We work closely with our clients so that we understand the intricacies of each 
-  project. This allows us to work in harmony the surrounding area to create truly 
-  stunning projects that will stand the test of time.
-
-  Small team, big ideas
-
-  About Us
-
-  Featured
-
-  See all
-
-  1
-  Project Del Sol
-  View All Projects
-
-  2
-  228B Tower
-  View All Projects
-
-  3
-  Le Prototype
-  View All Projects
-
-  Portfolio
-  About Us
-  Contact
-
-  See Our Portfolio
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

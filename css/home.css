@@ -1,0 +1,407 @@
+/* ========================================= CAROUSEL ============================== */
+
+.carousel-item img {
+    height: 550px;
+    filter: brightness(40%);
+    object-fit: cover;
+
+}
+
+.c-title-hero {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 0.9;
+    padding-right: 150px;
+    margin-right: 180px;
+}
+
+.c-txt {
+    font-size: 1.2rem;
+    text-align: left;
+    padding-right: 150px;
+    margin-right: 180px;
+}
+
+.c-btn {
+    background-color: #1B1D23;
+    color: #f4f4f4;
+    height: 45px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+
+/* ========================================= CONTENT ============================== */
+
+.c-welcome {
+    font-size: 14rem;
+    font-weight: 600;
+    color: #EEEFF4;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    top: 90px;
+    padding-top: 0;
+    margin-top: -30px;
+}
+
+.c-title {
+    font-weight: 600;
+    font-size: 4.7rem;
+    padding-left: 50px;
+}
+
+.c-welcome-txt {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1rem;
+}
+
+.c-img-content {
+    width: auto;
+    height: 450px;
+}
+
+/* ========================================= JUMBOTRON ============================== */
+
+.c-jumbotron {
+    background-image: url('../assets/home/desktop/image-small-team.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 5rem;
+
+}
+
+.c-jumbotron-txt {
+    color: #FFFFFF;
+    font-weight: 700;
+    padding-right: 34rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+/* ========================================= DESTACADOS ============================== */
+
+
+.c-featured-call-to-action {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.c-featured-call-to-action h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.c-featured-1 {
+    background-image: url('../assets/portfolio/desktop/image-del-sol.jpg'), linear-gradient(rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.c-featured-2 {
+    background-image: url('../assets/portfolio/desktop/image-228b.jpg'), linear-gradient(rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.c-featured-3 {
+    background-image: url('../assets/portfolio/desktop/image-prototype.jpg'), linear-gradient(rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.c-featured-1, .c-featured-2, .c-featured-3 {
+    margin: 0.5rem;
+    height: 33rem;
+    width: 26rem;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease;
+}
+
+.c-number {
+    color: #f4f4f4;
+    font-weight: 700;
+    font-size: 14rem;
+    opacity: 0.5;
+    position: relative;
+    left: 300px;
+    top: 1px;
+}
+
+.one {
+    position: relative;
+    left: 350px;
+}
+
+.c-text-container-featured {
+    position: relative;
+    top: 150px;
+}
+
+.c-title-featured {
+    color: #f4f4f4;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.c-txt-featured {
+    color: #DCEDDD;
+    font-size: 1rem;
+}
+
+.c-featured-1:hover, .c-featured-2:hover, .c-featured-3:hover {
+    transform: scale(1.05); /* Escala un 5% al hacer hover */
+}
+
+
+@media (min-width: 1200px) {
+
+    /* ========================================= CAROUSEL ============================== */
+    .c-title-hero {
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 0.9;
+        padding-right: 120px;
+        margin-right: 180px;
+    }
+
+    /* ========================================= DESTACADOS ============================== */
+    .c-featured-1, .c-featured-2, .c-featured-3 {
+        margin: 0.5rem;
+        height: 33rem;
+        width: 22.2rem;
+    }
+
+    .c-number {
+        left: 220px;
+    }
+
+    .one {
+        position: relative;
+        left: 280px;
+    }
+
+    .c-text-container-featured {
+        position: relative;
+        top: 150px;
+    }
+
+    .c-title-featured {
+        color: #f4f4f4;
+        font-weight: 800;
+        font-size: 2.5rem;
+    }
+
+    .c-txt-featured {
+        color: #DCEDDD;
+        font-size: 1rem;
+    }
+
+
+}
+
+
+@media (max-width: 900px) {
+
+    .c-title-hero {
+        padding: 0;
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .c-txt {
+        padding: 0 0 20px;
+        margin: 0;
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.7;
+
+    }
+
+    .c-btn {
+        font-size: 0.9rem;
+    }
+
+
+    /* ========================================= WELCOME ============================== */
+    .c-welcome {
+        display: none;
+    }
+
+    .c-title {
+        padding-top: 5rem;
+        font-weight: 600;
+        font-size: 4.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .c-welcome-txt {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 1rem;
+    }
+
+    .c-img-content {
+        display: none;
+    }
+
+    /* ========================================= JUMBOTRON ============================== */
+    .c-jumbotron {
+        background-image: url('../assets/home/tablet/image-small-team.jpg');
+    }
+
+    .c-jumbotron-txt {
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+
+    /* ========================================= DESTACADOS ============================== */
+    .c-jumbotron-btn {
+        display: none;
+    }
+
+    .c-featured-call-to-action h1 {
+        font-weight: 700;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .c-featured-1 {
+        background-image: url('../assets/portfolio/mobile/image-del-sol.jpg'), linear-gradient(rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15));
+    }
+
+    .c-featured-2 {
+        background-image: url('../assets/portfolio/mobile/image-228b.jpg'), linear-gradient(rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15));
+    }
+
+    .c-featured-3 {
+        background-image: url('../assets/portfolio/mobile/image-prototype.jpg'), linear-gradient(rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15));
+    }
+
+    .c-featured-1, .c-featured-2, .c-featured-3 {
+        margin: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .c-number {
+        left: 350px;
+        top: 1px;
+    }
+
+    .one {
+        position: relative;
+        left: 360px;
+    }
+
+    .c-text-container-featured {
+        top: 0;
+        bottom: 60px;
+    }
+
+    .c-title-featured {
+        font-size: 3.5rem;
+    }
+
+    .c-txt-featured {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 670px) {
+
+    .c-item .c-caption {
+        padding-left: 50px;
+        width: 330px;
+    }
+
+    .c-title-hero {
+        padding: 0 0 20px;
+        margin: 0;
+        font-size: 2.2rem;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    .c-txt {
+        padding: 0 0 30px;
+        margin: 0;
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.7;
+
+    }
+
+    .c-btn {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    /* ========================================= JUMBOTRON ============================== */
+    .c-jumbotron {
+        background-image: url('../assets/home/tablet/image-small-team.jpg');
+    }
+
+
+    .c-jumbotron-txt {
+        padding: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 470px) {
+
+
+    .c-item .c-caption {
+        padding-left: 0;
+        width: 260px;
+    }
+
+    .c-title-hero {
+        padding: 20px;
+        margin: 0;
+        font-size: 2rem;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    .c-txt {
+        padding: 10px;
+        margin: 0;
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.7;
+
+    }
+
+    .c-btn {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    /* ========================================= JUMBOTRON ============================== */
+    .c-jumbotron {
+        background-image: url('../assets/home/mobile/image-small-team.jpg');
+        text-align: center;
+    }
+
+    .c-jumbotron-txt {
+        padding: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+}
