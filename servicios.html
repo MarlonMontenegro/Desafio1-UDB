@@ -3,90 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Arquitectura</title>
+    <title>Servicios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: League Spartan -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
+        /* Variables para el color */
+        :root {
+            --red-color: #DF5656;
+            --gray-color: #6c757d;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+        /* Aplicar la fuente League Spartan */
+        body {
+            font-family: 'League Spartan', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Tamaños de fuente responsivos */
+        h1 {
+            font-size: 4vw;
         }
 
         h2 {
-            text-align: center;
+            font-size: 2.5vw;
+        }
+
+        p {
+            font-size: 1.2vw;
+        }
+
+        /* Navbar */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            max-width: 150px;
+        }
+
+        .navbar-links {
+            display: flex;
+        }
+
+        .nav-link {
+            font-size: 1.5vw;
+            color: #666;
+            margin-left: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #000;
+            font-size: 1.7vw;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.4s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .nav-link {
+                margin-left: 15px;
+                font-size: 4vw;
+            }
+
+            h1 {
+                font-size: 8vw;
+            }
+
+            h2 {
+                font-size: 5vw;
+            }
+
+            p {
+                font-size: 4vw;
+            }
+        }
+
+        /* Hero Section - Mitad y mitad */
+        .hero-section {
+            display: flex;
+            height: 100vh;
+        }
+
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
             color: #333;
         }
 
+        .hero-text h1 {
+            color: var(--red-color);
+            transition: all 0.3s ease;
+        }
+
+        .hero-text h2, .hero-text p {
+            transition: all 0.3s ease;
+        }
+
+        .hero-text:hover h1, .hero-text:hover h2, .hero-text:hover p {
+            color: var(--red-color);
+            transform: scale(1.05);
+        }
+
+        /* Animación de entrada para el texto */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sección de servicios */
+        .section h2 {
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.3s;
+            transition: all 0.3s ease;
+        }
+
+        /* Agregar el efecto hover a "Nuestros Servicios" */
+        .section h2:hover {
+            color: var(--red-color);
+            transform: scale(1.05);
+        }
+
+        /* Tarjetas de servicios */
         .service-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
             padding: 20px;
-            margin: 20px 0;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .service-card h3 {
-            color: #007BFF;
-        }
-
-        .service-card p {
-            line-height: 1.6;
+        /* Hover en las tarjetas */
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         .service-card img {
-            max-width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 10px;
         }
 
-        @media (min-width: 768px) {
-            .service-cards {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+        .service-card .text-container {
+            flex: 1;
+            padding-right: 20px;
+        }
 
-            .service-card {
-                width: 48%;
-            }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        /* Formulario Call to Action */
+        .cta-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            margin-bottom: 30px;
+        }
+
+        .cta-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-form input, .cta-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-form button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta-form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-light py-4">
     <div class="container">
-        <h2>Nuestros Servicios</h2>
-
-        <div class="service-cards">
-            <div class="service-card">
-                <img src="diseno-arquitectonico.jpg" alt="Diseño Arquitectónico">
-                <h3>Diseño Arquitectónico</h3>
-                <p>Desarrollamos proyectos personalizados desde la concepción de la idea hasta la entrega final, asegurándonos de que cada detalle arquitectónico esté perfectamente alineado con las necesidades del cliente.</p>
-            </div>
-
-            <div class="service-card">
-                <img src="remodelacion-interiores.jpg" alt="Remodelación de Interiores">
-                <h3>Remodelación de Interiores</h3>
-                <p>Transformamos espacios interiores para mejorar su funcionalidad y estética, utilizando materiales de alta calidad y técnicas innovadoras que maximizan el confort y la belleza.</p>
-            </div>
-
-            <div class="service-card">
-                <img src="gestion-proyectos.jpg" alt="Gestión de Proyectos">
-                <h3>Gestión de Proyectos</h3>
-                <p>Nos encargamos de todo el proceso de construcción, desde la planificación hasta la ejecución, gestionando todos los aspectos para asegurar que el proyecto se complete en tiempo y forma.</p>
-            </div>
-
-            <div class="service-card">
-                <img src="arquitectura-sostenible.jpg" alt="Arquitectura Sostenible">
-                <h3>Arquitectura Sostenible</h3>
-                <p>Diseñamos edificaciones que respetan el medio ambiente, implementando soluciones energéticas sostenibles que promueven la eficiencia y la conservación de los recursos naturales.</p>
-            </div>
+        <div>
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.svg" alt="Bootstrap" width="70" height="30">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="portafolio.html">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="about.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="contact.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Servicios</a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="col-md-6">
+        <img src="https://www.format.com/wp-content/uploads/how-to-photography-architecture.jpg" alt="Imagen de Arquitectura">
+    </div>
+    <div class="col-md-6 hero-text">
+        <h1>Servicios</h1>
+        <h2>Tu equipo de profesionales</h2>
+        <p>Ofrecemos una gama de servicios de arquitectura y construcción que transforman ideas en realidad.</p>
+    </div>
+</section>
+
+<!-- Servicios Section -->
+<section class="section text-center">
+    <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <!-- Servicio 1 -->
+        <div class="service-card">
+            <div class="text-container">
+                <h3>Diseño Arquitectónico</h3>
+                <p>Desarrollamos proyectos personalizados, asegurándonos de que cada detalle arquitectónico esté alineado con las necesidades del cliente.</p>
+            </div>
+            <img src="https://github.com/MarlonMontenegro/Desafio1-UDB/blob/main/assets/portfolio/desktop/image-228b.jpg?raw=true" alt="Diseño Arquitectónico">
+        </div>
+        <!-- Servicio 2 -->
+        <div class="service-card">
+            <div class="text-container">
+                <h3>Remodelación de Interiores</h3>
+                <p>Transformamos espacios interiores con materiales de alta calidad, mejorando su funcionalidad y estética.</p>
+            </div>
+            <img src="https://github.com/MarlonMontenegro/Desafio1-UDB/blob/main/assets/portfolio/desktop/image-del-sol.jpg?raw=true" alt="Remodelación de Interiores">
+        </div>
+        <!-- Servicio 3 -->
+        <div class="service-card">
+            <div class="text-container">
+                <h3>Gestión de Proyectos</h3>
+                <p>Nos encargamos de la planificación y ejecución completa de proyectos, asegurando la entrega en tiempo y forma.</p>
+            </div>
+            <img src="https://github.com/MarlonMontenegro/Desafio1-UDB/blob/main/assets/portfolio/desktop/image-edelweiss.jpg?raw=true" alt="Gestión de Proyectos">
+        </div>
+        <!-- Servicio 4 -->
+        <div class="service-card">
+            <div class="text-container">
+                <h3>Arquitectura Sostenible</h3>
+                <p>Diseñamos edificaciones sostenibles, implementando soluciones energéticas eficientes que respetan el medio ambiente.</p>
+            </div>
+            <img src="https://github.com/MarlonMontenegro/Desafio1-UDB/blob/main/assets/portfolio/desktop/image-federal.jpg?raw=true" alt="Arquitectura Sostenible">
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section (Formulario) -->
+<section class="cta-section">
+    <div class="container">
+        <h3>¿Interesado en nuestros servicios? Contáctanos</h3>
+        <form class="cta-form">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <input type="tel" placeholder="Tu teléfono" required>
+            <textarea placeholder="Escribe tu consulta aquí..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <p>© 2024 Ardh. Todos los Derechos Reservados</p>
+        <a href="#" class="text-white">Ver nuestro Portafolio</a>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
+
