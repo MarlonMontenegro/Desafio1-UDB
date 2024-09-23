@@ -1,57 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="#">
-  <link rel="stylesheet" href="css/Normalize.css">
-  <title>Arch Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <!-- BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS PERSONALIZADO  -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- CCS CONTACT -->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light py-4">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.svg" alt="Bootstrap" width="70" height="30">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="portfolio.html">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="about.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="contact.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="servicios.html">Servicios</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Sección 1 -->
+    <section class="seccion-contacto">
+      <div class="contenedor-imagen">
+          <img src="/assets/contact/desktop/image-hero.jpg" alt="Teléfono antiguo">
+          <div class="texto-superpuesto">Contactanos</div>
+      </div>
+      <div class="contenedor-texto">
+          <h2>Cuentanos sobre tu proyecto</h2>
+          <p>Nos encantaría saber más sobre tu proyecto. Déjanos un mensaje o llámanos. Tenemos dos oficinas, una en San Salvador y otra en Santa Ana. ¡Si estás cerca, ven a saludarnos!</p>
+      </div>
+  </section>
 
-  Contact
+  <!-- Sección de Detalles de Contacto -->
+        <div class="encabezado-contacto">
+            <h1>Detalles de Contacto</h1>
+        </div>
+        <div class="informacion-contacto">
+            <div class="oficina">
+                <h2>San Salvador</h2>
+                <p>Mail: sansalvador@arch.com.sv</p>
+                <p>Dirección: 4 Calle Ote #100, San Salvador</p>
+                <p>Teléfono: 2568-5178</p>
+                <a href="https://www.google.com/maps/place/Biblioteca+Nacional+de+El+Salvador+(BINAES)/@13.6969021,-89.1960759,17z/data=!3m1!4b1!4m6!3m5!1s0x8f6331c27032cde1:0x4f51734e0a454227!8m2!3d13.6968969!4d-89.191205!16s%2Fg%2F11sf65qxkz?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" class="enlace-mapa">Ver en el Mapa  →</a>
+            </div>
+            <div class="oficina">
+                <h2>Santa Ana</h2>
+                <p>Mail: santaana@arch.com.sv</p>
+                <p>Dirección: Av. Independencia #23, Santa Ana</p>
+                <p>Teléfono: 2568-5179</p>
+                <a href="https://www.google.com/maps/place/Alcald%C3%ADa+Municipal+de+Santa+Ana,+Avenida+Independencia+Sur,+Santa+Ana/@13.9939291,-89.5581854,17z/data=!4m6!3m5!1s0x8f62e8a57bed7a9f:0x5b7064d2713c0c31!8m2!3d13.9947723!4d-89.557354!16s%2Fg%2F11bvtb7zd3?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" class="enlace-mapa">Ver en el Mapa  →</a>
+            </div>
+        </div>
 
-  Portfolio
-  About Us
-  Contact
+  <!-- Sección del Mapa -->
+  <section class="mapa">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1rVckGDfvtP64-yLg04K929Zlj4Ta_LY&ehbc=2E312F&noprof=1" width="800" height="480"></iframe>
+  </section>
 
-  Contact
+  <!-- Formulario de Contacto -->
+  <section class="formulario-contacto">
+      <h3>Ponte en contacto con nosotros</h3>
+      <form action="#">
+          <input type="text" placeholder="Nombre">
+          <input type="email" placeholder="Correo">
+          <textarea placeholder="Mensaje"></textarea>
+          <button class="boton-enviar">Enviar</button>
+      </form>
+  </section>
+      <!-- Footer -->
+      <footer class="footer container-fluid d-flex justify-content-between align-items-center ">
+        <!-- Logo a la izquierda -->
+        <div class="logo bg-dark text-white d-flex justify-content-center align-items-center">
+            <img src="/assets/logo-white.svg">
+        </div>
 
-  Tell us about your project
+        <!-- Menú de navegación en el centro -->
+        <ul class="nav-center nav-menu list-unstyled d-flex m-0">
+            <li class="mx-4">
+                <a href="/portfolio.html" class="text-muted">Portafolio</a>
+            </li>
+            <li class="mx-4">
+                <a href="/about.html" class="text-muted">Sobre nosotros</a>
+            </li>
+            <li class="mx-4">
+                <a href="/contact.html" class="text-muted">Contacto</a>
+            </li>
+            <li class="mx-4">
+              <a href="/servicios.html" class="text-muted">Servicios</a>
+          </li>
+        </ul>
+    </footer>
 
-  We’d love to hear more about your project. Please, leave a message below or give 
-  us a call. We have two offices, one in Texas and one in Tennessee. If you find 
-  yourself nearby, come say hello!
-
-  Contact Details
-
-  Main Office
-  Mail:	archone@mail.com
-  Address: 1892 Chenoweth Drive TN
-  Phone: 123-456-3451
-
-  View on Map
-
-  Office II
-  Mail: archtwo@mail.com
-  Address: 3399 Wines Lane TX
-  Phone: 832-123-4321
-
-  View on Map
-
-  Connect with us
-
-  Name
-  Email
-  Message
-
-
-  Portfolio
-  About Us
-  Contact
-
-  See Our Portfolio
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

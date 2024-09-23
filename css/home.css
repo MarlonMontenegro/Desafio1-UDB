@@ -162,6 +162,36 @@
     transform: scale(1.05); /* Escala un 5% al hacer hover */
 }
 
+/*============================== FOOTER ==============================*/ 
+.footer {
+    margin-top: 100px;
+    background-color: #f4f4f4;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-center {
+    text-align: center;
+}
+.nav-menu li a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-dark {
+    background-color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-dark:hover {
+    background-color: #333333;
+}
 
 @media (min-width: 1200px) {
 
